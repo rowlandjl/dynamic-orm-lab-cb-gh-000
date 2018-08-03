@@ -54,5 +54,7 @@ class InteractiveRecord
     sql = <<-SQL
     SELECT * FROM #{self.table_name}
     WHERE #{options.keys.first.to_s} = "#{options[options.keys.first]}"
+    SQL
+    DB[:conn].execute(sql)
 
 end
