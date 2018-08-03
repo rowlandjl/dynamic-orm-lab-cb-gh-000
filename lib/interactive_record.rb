@@ -30,9 +30,9 @@ class InteractiveRecord
       values << "'#{send(col)}'" unless send(col).nil?
     end
     values.join(', ')
-  end 
+  end
 
   def self.table_name
-    self.to_s.downcase.pluralize 
+    self.to_s.downcase.pluralize
   end 
 end
